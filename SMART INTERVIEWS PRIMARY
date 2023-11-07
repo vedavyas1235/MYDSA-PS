@@ -1,0 +1,25 @@
+1.Sum of Array Elements
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+u=int(input())
+for i in range(u):
+    y=int(input())
+    yy=list(map(int,input().split()))
+    print(sum(yy))
+
+2.Print Right Angled Triangle Pattern
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+def rightTriangle(n):
+    for i in range(n+1):
+        for j in range(1,n-i+1):
+            print(" ", end="")
+        for j in range(n-i+1,n+1):
+            print("*", end="")
+        print()
+
+t= int(input())
+for i in range(t):
+    print("Case #"+ str(i+1) + ":",end="")
+    n=int(input())
+    rightTriangle(n)
+
+3.
