@@ -53,4 +53,19 @@ for i in range(int(input())):
     print("Case #"+str(i+1)+':')
     hollow(b)
 
-4.
+4.Reverse Bits
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+def rv(n,size):
+    binn=bin(n)
+    ar=binn[-1:1:-1]
+    ar=ar+(size-len(ar))*"0"
+    print(int(ar,2))
+
+bb=int(input())
+size=32
+for i in range(bb):
+    n=int(input())
+    rv(n,size)
+
+5.
+
