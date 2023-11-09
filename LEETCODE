@@ -8,3 +8,16 @@ class Solution:
                     return [i,j]
 
 
+7. Reverse Integer
+class Solution:
+    def reverse(self, x: int) -> int:
+        if x>0:
+            f=1
+        else:
+            f=-1
+        x=x*f
+        p=int(str(x)[::-1])*f
+        if p > (2 ** 31) - 1 or p < -(2 ** 31):
+            return 0
+        return p
+
