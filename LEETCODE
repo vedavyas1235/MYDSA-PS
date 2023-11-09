@@ -30,4 +30,32 @@ class Solution:
         d=bin(c)
         return d[2:]
 
+171. Excel Sheet Column Number
+class Solution:
+    def titleToNumber(self, c: str) -> int:
+        a=0
+        p=0
+        for i in reversed(c):
+            d=ord(i)-64
+            a=a+d*26**p
+            p=p+1
+        return a
+
+202. Happy Number
+class Solution:
+    def isHappy(self, n: int) -> bool:
+        v=set()
+        while n!=1 and n not in v:
+            v.add(n)
+            n=sum(int(digit)**2 for digit in str(n))
+        return n==1
+
+231. Power of Two
+class Solution:
+    def isPowerOfTwo(self, n: int) -> bool:
+        if n<=0:
+            return False
+        return math.log2(n)%1==0
+
+
 
