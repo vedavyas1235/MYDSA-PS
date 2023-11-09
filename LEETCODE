@@ -57,5 +57,41 @@ class Solution:
             return False
         return math.log2(n)%1==0
 
+412. Fizz Buzz
+class Solution:
+    def fizzBuzz(self, n: int) -> List[str]:
+        v=[]
+        for i in range(1,n+1):
+            if i%3==0 and i%5==0:
+                v.append("FizzBuzz")
+            elif i%3==0:
+                v.append("Fizz")
+            elif i%5==0:
+                v.append("Buzz")
+            else:
+                v.append(str(i))
+        return v
 
+1342. Number of Steps to Reduce a Number to Zero
+class Solution:
+    def numberOfSteps(self, num: int) -> int:
+        d=0
+        while num!=0:
+            if num%2==0:
+                num=num/2
+                d+=1
+            else:
+                num-=1
+                d+=1
+        return d
 
+2535. Difference Between Element Sum and Digit Sum of an Array
+class Solution:
+    def differenceOfSum(self, nums: List[int]) -> int:
+        s=sum(nums)
+        ss=0
+        for i in nums:
+            for j in str(i):
+                ss+=int(j)
+        return abs(s-ss)
+        
