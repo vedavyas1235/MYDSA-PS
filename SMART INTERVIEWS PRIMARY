@@ -67,5 +67,29 @@ for i in range(bb):
     n=int(input())
     rv(n,size)
 
-5.
+5.Pair with Difference K
+for i in range(int(input())):
+    m,n=map(int,input().split())
+    dd=set(map(int,input().split()))
+    c=0
+    for i in dd:
+            if n+i in dd:
+                c=c+1
+    if c>0:
+        print("true")
+    else:
+        print("false")
+
+6.Triple Trouble
+for i in range(int(input())):
+    v=int(input())
+    lst=list(map(int,input().split()))
+    d=sum(lst)
+    v=[*set(lst)]
+    g=sum(v)
+    z=d-g
+    zz=z//2
+    print(g-zz)
+
+7.
 
