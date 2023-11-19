@@ -91,5 +91,5 @@ for i in range(int(input())):
     zz=z//2
     print(g-zz)
 
-7.
+7.Rearrange Sequence 1
 
