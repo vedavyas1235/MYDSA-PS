@@ -92,8 +92,81 @@ for i in range(int(input())):
     print(g-zz)
 
 7.Rearrange Sequence 1
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+for i in range(int(input())):
+    v=input()
+    ff=list(map(int,input().split()))
+    ans=0
+    for i in range(len(ff)):
+        maxx,minn=ff[i],ff[i]
+        for j in range(i,len(ff)):
+            maxx=max(maxx,ff[j])
+            minn=min(minn,ff[j])
+            if (j-i+1==maxx-minn+1):
+                ans=max(ans,j-i+1)
+    print(ans)
+
+
 8.Rearrange Sequence 2
-7.Rearrange Sequence 3
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+for i in range(int(input())):
+    v=int(input())
+    ff=list(map(int,input().split()))
+    ans=0
+    for i in range(len(ff)):
+        c=set()
+        minn,maxx=ff[i],ff[i]
+        for j in range(i,len(ff)):
+            c.add(ff[j])
+            maxx=max(maxx,ff[j])
+            minn=min(minn,ff[j])
+            if maxx-minn+1==len(c):
+                ans=max(ans,maxx-minn+1)
+    print(ans)
+
+
+9.Rearrange Sequence 3
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+for i in range(int(input())):
+    vv=int(input())
+    ff=list(map(int,input().split()))
+    ans=0
+    for i in range(len(ff)):
+        c=set()
+        maxx,minn=ff[i],ff[i]
+        for j in range(i,len(ff)):
+            c.add(ff[j])
+            maxx=max(maxx,ff[j])
+            minn=min(minn,ff[j])
+            if maxx-minn+1==len(c):
+                ans=max(ans,maxx-minn+1)
+    print(ans+1)
+
+10.Distinct Elements in Window
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+for i in range(int(input())):
+    vv,k=map(int,input().split())
+    ff=list(map(int,input().split()))
+    hashmap={}
+    for i in range(k):
+        if ff[i] in hashmap:
+            hashmap[ff[i]]+=1
+        else:
+            hashmap[ff[i]]=1
+    print(len(hashmap),end=" ")
+
+    for i in range(k,vv):
+        if ff[i] in hashmap:
+            hashmap[ff[i]]+=1
+        else:
+            hashmap[ff[i]]=1
+        hashmap[ff[i-k]]-=1
+        if hashmap[ff[i-k]]==0:
+            del(hashmap[ff[i-k]])
+        print(len(hashmap),end=" ")
+    print("\n")
+
+11.
 
 
 
