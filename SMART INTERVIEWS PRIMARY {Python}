@@ -92,4 +92,8 @@ for i in range(int(input())):
     print(g-zz)
 
 7.Rearrange Sequence 1
+8.Rearrange Sequence 2
+7.Rearrange Sequence 3
+
+
 
